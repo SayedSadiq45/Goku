@@ -3,39 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dragon Ball — Ultra Instinct Reveal</title>
+<title>GOKU — SAYED SADIQ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Luckiest+Guy&family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  html,body { height:100%; background:#04060c; overflow:hidden; }
+  html,body { height:100%; background:#050505; overflow:hidden; }
   .hero { position:relative; width:100vw; height:100vh; overflow:hidden; cursor:none; }
   .hero::before {
     content:''; position:absolute; top:0; left:0; right:0; height:4px; z-index:20;
-    background:linear-gradient(90deg, transparent, #FF8C1A, #2E62D9, #C9D6E8, transparent);
+    background:linear-gradient(90deg, transparent, #d4ff00, #fff, #d4ff00, transparent);
   }
   .hero-canvas { position:absolute; inset:0; width:100%; height:100%; display:block; z-index:0; }
   .content { position:absolute; inset:0; z-index:10; pointer-events:none; }
 
   .logo {
-    position:absolute; top:34px; left:50%; transform:translateX(-50%); z-index:15;
-    text-align:center; pointer-events:none;
+    position:absolute; top:30px; left:42px; z-index:15;
+    text-align:left; pointer-events:none;
   }
   .logo .op {
-    font-family:'Luckiest Guy', cursive; font-size:64px; line-height:0.9;
-    letter-spacing:0.02em; text-transform:uppercase;
-    color:#FF9E2C;
-    -webkit-text-stroke:3px #12244a;
-    text-shadow:
-      0 4px 0 #b33a00,
-      0 6px 0 #12244a,
-      0 0 24px rgba(255,140,26,0.45);
+    font-family:'Archivo Black',sans-serif; font-size:48px; line-height:0.9;
+    letter-spacing:0.04em; text-transform:uppercase; color:#d4ff00;
+    text-shadow:0 0 26px rgba(212,255,0,0.45);
   }
   .logo .tag {
-    margin-top:2px; font-family:'Bebas Neue',sans-serif; font-size:15px;
-    letter-spacing:0.5em; color:#fff; text-shadow:0 0 8px rgba(0,0,0,0.8);
-    padding-left:0.5em;
+    margin-top:8px; font-family:'DM Mono',monospace; font-size:11px;
+    letter-spacing:0.28em; color:#fff; padding-left:0.28em;
   }
 
   .left {
@@ -47,53 +41,59 @@
     width:380px; text-align:right; display:flex; flex-direction:column; gap:14px; align-items:flex-end;
   }
   .eyebrow {
-    font-family:'Bebas Neue',sans-serif; font-size:15px; letter-spacing:0.35em;
-    text-transform:uppercase; color:#FF8C1A; padding-left:1.4rem; position:relative;
+    font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.2em;
+    text-transform:uppercase; color:#d4ff00; padding-left:1.4rem; position:relative;
   }
   .eyebrow::before {
     content:''; position:absolute; left:0; top:50%; transform:translateY(-50%);
-    width:1rem; height:1.5px; background:#FF8C1A;
+    width:1rem; height:1.5px; background:#d4ff00;
   }
-  .right .eyebrow { color:#9fc2ff; padding:0 1.4rem 0 0; }
-  .right .eyebrow::before { left:auto; right:0; background:#9fc2ff; }
+  .right .eyebrow { color:#fff; padding:0 1.4rem 0 0; }
+  .right .eyebrow::before { left:auto; right:0; background:#fff; }
 
   .title {
-    font-family:'Bangers', cursive; font-size:78px; line-height:0.92; color:#fff;
-    text-transform:uppercase; letter-spacing:0.02em;
-    text-shadow:3px 3px 0 #b33a00, 0 0 14px rgba(255,140,26,0.5), 0 0 36px rgba(255,140,26,0.3);
+    font-family:'Archivo Black',sans-serif; font-size:78px; line-height:0.92; color:#fff;
+    text-transform:uppercase; letter-spacing:-0.03em;
+    text-shadow:4px 4px 0 #111, 0 0 22px rgba(212,255,0,0.35);
   }
   .right .title {
-    font-size:62px; color:#fff;
-    text-shadow:3px 3px 0 #2E62D9, 0 0 16px rgba(160,200,255,0.55), 0 0 40px rgba(160,200,255,0.35);
+    font-size:58px; color:#d4ff00;
+    text-shadow:4px 4px 0 #111, 0 0 26px rgba(212,255,0,0.5);
   }
   .desc {
-    font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-size:19px;
-    line-height:1.6; color:rgba(255,255,255,0.82);
+    font-family:'Manrope',sans-serif; font-size:16px;
+    line-height:1.65; color:rgba(255,255,255,0.82);
   }
   .btn {
-    font-family:'Bebas Neue',sans-serif; font-size:17px; letter-spacing:0.2em; text-transform:uppercase;
-    padding:14px 28px; background:transparent; color:#fff; border:2px solid #FF8C1A;
+    font-family:'DM Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase;
+    padding:14px 22px; background:#d4ff00; color:#050505; border:2px solid #d4ff00;
     cursor:pointer; align-self:flex-start; position:relative; overflow:hidden; isolation:isolate;
     clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%); pointer-events:all;
     transition:border-color .3s, color .3s;
   }
   .btn::after {
-    content:''; position:absolute; inset:0; background:#FF8C1A;
+    content:''; position:absolute; inset:0; background:#fff;
     transform:translateX(-105%) skewX(-8deg); transition:transform .38s cubic-bezier(.4,0,.2,1); z-index:-1;
   }
-  .btn:hover { border-color:#ffb45e; color:#1a0a00; }
+  .btn:hover { border-color:#fff; color:#050505; }
   .btn:hover::after { transform:translateX(0) skewX(-8deg); }
 
   .hint {
     position:absolute; left:50%; bottom:24px; transform:translateX(-50%); z-index:16;
-    font-family:'Bebas Neue',sans-serif; letter-spacing:0.25em; font-size:14px; color:#fff;
+    font-family:'DM Mono',monospace; letter-spacing:0.12em; font-size:11px; color:#fff;
     background:rgba(0,0,0,0.45); padding:8px 18px; border-radius:999px; pointer-events:none;
     transition:opacity .5s;
   }
+  .links { display:flex; gap:10px; pointer-events:all; }
+  .links a { color:#fff; border:1px solid rgba(255,255,255,.6); padding:10px 14px; text-decoration:none; font:500 11px 'DM Mono',monospace; letter-spacing:.08em; text-transform:uppercase; transition:background .25s, color .25s, border-color .25s; }
+  .links a:hover { background:#d4ff00; border-color:#d4ff00; color:#050505; }
+  .right .links { justify-content:flex-end; }
+  .signature { position:absolute; right:42px; top:38px; z-index:15; color:#fff; font:11px 'DM Mono',monospace; letter-spacing:.15em; text-transform:uppercase; }
+  .signature strong { color:#d4ff00; font-weight:500; }
   @media (max-width:680px){
-    .logo .op{font-size:38px;} .logo .tag{font-size:11px; letter-spacing:0.3em;}
-    .left{left:22px; bottom:34px; width:62%;} .right{right:22px; width:58%;}
-    .title{font-size:42px;} .right .title{font-size:34px;} .desc{font-size:15px;}
+    .logo{left:22px; top:24px;} .logo .op{font-size:34px;} .logo .tag{font-size:9px; letter-spacing:0.18em;}
+    .signature{right:22px; top:28px; font-size:9px;} .left{left:22px; bottom:34px; width:70%;} .right{right:22px; width:65%;}
+    .title{font-size:42px;} .right .title{font-size:34px;} .desc{font-size:13px;}
     .btn{font-size:14px; padding:11px 18px;}
   }
 </style>
@@ -103,25 +103,32 @@
   <canvas class="hero-canvas" id="cv"></canvas>
 
   <div class="logo">
-    <div class="op">Goku</div>
-    <div class="tag">ULTRA&nbsp;&nbsp;INSTINCT &nbsp;&middot;&nbsp; MASTERED</div>
+    <div class="op">GOKU</div>
+    <div class="tag">ULTRA&nbsp;&nbsp;INSTINCT &nbsp;&middot;&nbsp; 2026</div>
   </div>
+  <div class="signature"><strong>SAYED SADIQ</strong> / CREATIVE DEVELOPER</div>
 
   <div class="content">
     <div class="left">
-      <span class="eyebrow">Saiyan Raised on Earth</span>
-      <h1 class="title">SON<br>GOKU</h1>
-      <p class="desc">A pure heart, an endless appetite, and a hunger for the next great fight &mdash; the low-class warrior who keeps breaking every limit put in front of him.</p>
-      <button class="btn">Power Up</button>
+      <span class="eyebrow">Meet the signal</span>
+      <h1 class="title">SAYED<br>SADIQ</h1>
+      <p class="desc">Building sharp digital experiences with a point of view. Curious, precise, and always in motion.</p>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/sayed-sadiq45/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/SayedSadiq45" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
     <div class="right">
-      <span class="eyebrow">Beyond the Gods</span>
-      <h1 class="title">ULTRA<br>INSTINCT</h1>
-      <p class="desc">Mastered. Mind silent, body moving on its own &mdash; silver-haired serenity where every strike and dodge happens before thought.</p>
+      <span class="eyebrow">The work has a pulse</span>
+      <h1 class="title">GOKU<br>IN MOTION</h1>
+      <p class="desc">A visual identity for ideas that refuse to sit still. Move across the frame and reveal the layer beneath.</p>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/sayed-sadiq45/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      </div>
     </div>
   </div>
 
-  <div class="hint" id="hint">&#9656; MOVE ACROSS TO TRANSFORM &#9666;</div>
+  <div class="hint" id="hint">&#9656; MOVE ACROSS TO REVEAL &#9666;</div>
 </div>
 
 <script>
